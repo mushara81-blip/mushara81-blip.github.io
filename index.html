@@ -1,2 +1,233 @@
 
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reformas en general en Marbella · Tu reforma perfecta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f5f3ef;
+  color:#2f2f2f;
+}
+.hero{
+  background:url("https://images.unsplash.com/photo-1604014237800-1c9102c219da") center/cover;
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.box{
+  background:rgba(255,255,255,.92);
+  padding:45px;
+  border-radius:18px;
+  max-width:950px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+.flags span{
+  font-size:28px;
+  cursor:pointer;
+  margin:0 10px;
+}
+h1{
+  font-size:36px;
+  margin:15px 0;
+}
+.subtitle{
+  font-size:18px;
+  color:#666;
+  margin-bottom:25px;
+}
+.btn{
+  background:#25D366;
+  color:white;
+  padding:16px 34px;
+  border-radius:40px;
+  font-size:18px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+.email{
+  display:block;
+  margin-top:12px;
+  color:#2f7d6d;
+  font-weight:bold;
+  text-decoration:none;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+}
+.card{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  margin-bottom:30px;
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+h2{
+  color:#2f7d6d;
+  margin-top:0;
+}
+ul li{
+  margin-bottom:10px;
+}
+.float-whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:16px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+  z-index:999;
+}
+@media(max-width:600px){
+  h1{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<a class="float-whatsapp" href="https://wa.me/34643700299" target="_blank">
+💬 WhatsApp
+</a>
+
+<div class="hero">
+  <div class="box">
+
+    <div class="flags">
+      <span onclick="setLang('es')">🇪🇸</span>
+      <span onclick="setLang('en')">🇬🇧</span>
+      <span onclick="setLang('ro')">🇷🇴</span>
+      <span onclick="setLang('ua')">🇺🇦</span>
+    </div>
+
+    <h1 id="title"></h1>
+    <div class="subtitle" id="subtitle"></div>
+
+    <a class="btn" href="https://wa.me/34643700299" target="_blank">
+      WhatsApp: +34 643 700 299
+    </a>
+
+    <a class="email" href="mailto:handymanmarbella@outlook.com">
+      handymanmarbella@outlook.com
+    </a>
+
+  </div>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2 id="servicesTitle"></h2>
+<ul id="services"></ul>
+</div>
+
+<div class="card">
+<h2 id="aboutTitle"></h2>
+<p id="about1"></p>
+<p id="about2"></p>
+</div>
+
+</div>
+
+<script>
+const data = {
+es:{
+title:"Reformas en general en Marbella · Tu reforma perfecta",
+subtitle:"Electricidad • Fontanería • Pintura • Reformas del hogar",
+servicesTitle:"Servicios",
+services:[
+"Electricidad",
+"Fontanería",
+"Pintura interior y exterior",
+"Reformas de baños y cocinas",
+"Mantenimiento del hogar"
+],
+aboutTitle:"Reformas profesionales en Marbella",
+about1:"Ofrecemos reformas en general para apartamentos, casas y viviendas en Marbella.",
+about2:"Trabajo limpio, serio y de confianza, adaptado a las necesidades de cada cliente."
+},
+en:{
+title:"General Renovations in Marbella · Your perfect renovation",
+subtitle:"Electrical • Plumbing • Painting • Home renovation",
+servicesTitle:"Services",
+services:[
+"Electrical work",
+"Plumbing",
+"Painting",
+"Bathroom and kitchen renovation",
+"Home maintenance"
+],
+aboutTitle:"Professional renovations in Marbella",
+about1:"We provide general renovation services for homes and apartments in Marbella.",
+about2:"Clean, reliable work with attention to detail."
+},
+ro:{
+title:"Renovări generale în Marbella · Reforma ta perfectă",
+subtitle:"Electricitate • Instalații • Vopsire • Renovări",
+servicesTitle:"Servicii",
+services:[
+"Electricitate",
+"Instalații sanitare",
+"Vopsire",
+"Renovări băi și bucătării",
+"Întreținere locuințe"
+],
+aboutTitle:"Renovări profesionale în Marbella",
+about1:"Oferim renovări generale pentru apartamente și case în Marbella.",
+about2:"Lucrări curate, serioase și de încredere."
+},
+ua:{
+title:"Загальний ремонт у Марбельї · Твій ідеальний ремонт",
+subtitle:"Електрика • Сантехніка • Фарбування • Ремонт",
+servicesTitle:"Послуги",
+services:[
+"Електрика",
+"Сантехніка",
+"Фарбування",
+"Ремонт ванних і кухонь",
+"Обслуговування житла"
+],
+aboutTitle:"Професійний ремонт у Марбельї",
+about1:"Виконуємо загальний ремонт квартир і будинків у Марбельї.",
+about2:"Працюємо якісно, чисто та надійно."
+}
+};
+
+function setLang(lang){
+document.getElementById("title").innerText=data[lang].title;
+document.getElementById("subtitle").innerText=data[lang].subtitle;
+document.getElementById("servicesTitle").innerText=data[lang].servicesTitle;
+
+const ul=document.getElementById("services");
+ul.innerHTML="";
+data[lang].services.forEach(s=>{
+const li=document.createElement("li");
+li.innerText=s;
+ul.appendChild(li);
+});
+
+document.getElementById("aboutTitle").innerText=data[lang].aboutTitle;
+document.getElementById("about1").innerText=data[lang].about1;
+document.getElementById("about2").innerText=data[lang].about2;
+}
+
+setLang("es");
+</script>
+
+</body>
+</html>

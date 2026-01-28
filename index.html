@@ -1,1 +1,225 @@
 
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+<meta charset="UTF-8">
+<title>Premium Handyman Marbella</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f5f3ef;
+  color:#2f2f2f;
+}
+.hero{
+  background:url("https://images.unsplash.com/photo-1604014237800-1c9102c219da") center/cover;
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.box{
+  background:rgba(255,255,255,.92);
+  padding:45px;
+  border-radius:18px;
+  max-width:950px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+.flags span{
+  font-size:28px;
+  cursor:pointer;
+  margin:0 10px;
+}
+h1{
+  font-size:36px;
+  margin:15px 0;
+}
+.subtitle{
+  font-size:18px;
+  color:#666;
+  margin-bottom:25px;
+}
+.btn{
+  background:#2f7d6d;
+  color:white;
+  padding:16px 34px;
+  border-radius:40px;
+  font-size:18px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+.email{
+  display:block;
+  margin-top:12px;
+  color:#2f7d6d;
+  font-weight:bold;
+  text-decoration:none;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+}
+.card{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  margin-bottom:30px;
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+h2{
+  color:#2f7d6d;
+  margin-top:0;
+}
+ul li{
+  margin-bottom:10px;
+}
+@media(max-width:600px){
+  h1{font-size:26px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="box">
+
+    <div class="flags">
+      <span onclick="setLang('ua')">🇺🇦</span>
+      <span onclick="setLang('es')">🇪🇸</span>
+      <span onclick="setLang('ro')">🇷🇴</span>
+      <span onclick="setLang('en')">🇬🇧</span>
+    </div>
+
+    <h1 id="title"></h1>
+    <div class="subtitle" id="subtitle"></div>
+
+    <a class="btn" href="https://wa.me/34643700299" target="_blank">
+      WhatsApp: +34 643 700 299
+    </a>
+
+    <a class="email" href="mailto:handymanmarbella@outlook.com">
+      handymanmarbella@outlook.com
+    </a>
+
+  </div>
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2 id="servicesTitle"></h2>
+<ul id="services"></ul>
+</div>
+
+<div class="card">
+<h2 id="aboutTitle"></h2>
+<p id="about1"></p>
+<p id="about2"></p>
+<p id="about3"></p>
+</div>
+
+</div>
+
+<script>
+const data = {
+ua:{
+title:"Преміальні майстри та ремонт дому в Марбельї",
+subtitle:"Якісний ремонт • Чисте оздоблення • Надійний місцевий сервіс",
+servicesTitle:"Послуги",
+services:[
+"Ремонт квартир та будинків",
+"Ванні кімнати та оздоблення",
+"Фарбування та декоративні роботи",
+"Сантехніка",
+"Електрика та дрібні роботи",
+"Збірка меблів та кухонь"
+],
+aboutTitle:"🏡 Преміальний майстер у Марбельї",
+about1:"Надаю преміальні послуги майстра та ремонту житла в Марбельї.",
+about2:"Працюю акуратно, чисто та з увагою до деталей.",
+about3:"Мене обирають клієнти, які цінують якість та надійність."
+},
+es:{
+title:"Manitas Premium y Reparaciones en Marbella",
+subtitle:"Acabados limpios • Servicio fiable • Maestro premium",
+servicesTitle:"Servicios",
+services:[
+"Reparación de apartamentos y casas",
+"Baños y reformas",
+"Pintura y acabados decorativos",
+"Fontanería",
+"Electricidad y pequeños trabajos",
+"Montaje de muebles y cocinas"
+],
+aboutTitle:"🏡 Manitas Premium en Marbella",
+about1:"Ofrezco servicios premium de manitas y reformas en Marbella.",
+about2:"Trabajo limpio, cuidadoso y con atención al detalle.",
+about3:"Clientes privados confían en mi calidad y profesionalismo."
+},
+ro:{
+title:"Handyman Premium și Reparații în Marbella",
+subtitle:"Finisaje curate • Serviciu sigur • Meșter premium",
+servicesTitle:"Servicii",
+services:[
+"Reparații apartamente și case",
+"Băi și renovări",
+"Vopsire și finisaje decorative",
+"Instalații sanitare",
+"Electricitate și lucrări mici",
+"Montaj mobilier și bucătării"
+],
+aboutTitle:"🏡 Handyman Premium în Marbella",
+about1:"Ofer servicii premium de handyman și renovări în Marbella.",
+about2:"Lucrez curat, atent și cu grijă pentru detalii.",
+about3:"Clienții apreciază calitatea și seriozitatea mea."
+},
+en:{
+title:"Premium Handyman & Home Repair in Marbella",
+subtitle:"Clean finish • Reliable service • Premium craftsmanship",
+servicesTitle:"Services",
+services:[
+"Apartment and house repair",
+"Bathroom renovation",
+"Painting and decorative finishes",
+"Plumbing services",
+"Electrical work",
+"Furniture and kitchen assembly"
+],
+aboutTitle:"🏡 Premium Handyman in Marbella",
+about1:"I provide premium handyman and home repair services in Marbella.",
+about2:"Clean, precise work with attention to detail.",
+about3:"Trusted by private clients who value quality."
+}
+};
+
+function setLang(lang){
+document.getElementById("title").innerText=data[lang].title;
+document.getElementById("subtitle").innerText=data[lang].subtitle;
+document.getElementById("servicesTitle").innerText=data[lang].servicesTitle;
+
+const ul=document.getElementById("services");
+ul.innerHTML="";
+data[lang].services.forEach(s=>{
+  const li=document.createElement("li");
+  li.innerText=s;
+  ul.appendChild(li);
+});
+
+document.getElementById("aboutTitle").innerText=data[lang].aboutTitle;
+document.getElementById("about1").innerText=data[lang].about1;
+document.getElementById("about2").innerText=data[lang].about2;
+document.getElementById("about3").innerText=data[lang].about3;
+}
+
+setLang("ua");
+</script>
+
+</body>
+</html>

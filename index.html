@@ -8,12 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f5f5f5;
-  color:#333;
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#333}
 .hero{
   background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
   min-height:90vh;
@@ -34,15 +29,8 @@ body{
   cursor:pointer;
   margin:0 8px;
 }
-h1{
-  font-size:36px;
-  margin:20px 0 10px;
-}
-.subtitle{
-  font-size:18px;
-  color:#555;
-  margin-bottom:25px;
-}
+h1{font-size:36px;margin:20px 0 10px}
+.subtitle{font-size:18px;color:#555;margin-bottom:25px}
 .btn{
   background:#25D366;
   color:#fff;
@@ -57,10 +45,7 @@ h1{
   padding:50px 20px;
   background:#fff;
 }
-h2{
-  color:#1f6f5c;
-  margin-top:40px;
-}
+h2{color:#1f6f5c;margin-top:40px}
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -78,9 +63,7 @@ footer{
   text-align:center;
   padding:30px;
 }
-@media(max-width:600px){
-  h1{font-size:26px;}
-}
+@media(max-width:600px){h1{font-size:26px}}
 </style>
 </head>
 
@@ -117,7 +100,10 @@ footer{
 <h2 id="servicesTitle"></h2>
 <ul id="services"></ul>
 
-<h2>Contacto</h2>
+<h2 id="zoneTitle"></h2>
+<p id="zoneText"></p>
+
+<h2 id="contactTitle"></h2>
 <p>
 <strong>Teléfono / WhatsApp:</strong> +34 643 700 299<br>
 <strong>Email:</strong> handymanmarbella@outlook.com
@@ -133,83 +119,105 @@ footer{
 const data={
 es:{
 title:"Reformas en general en Marbella · Tu reforma perfecta",
-subtitle:"Electricidad • Fontanería • Pintura • Reformas del hogar",
+subtitle:"Electricidad · Fontanería · Pintura · Reformas del hogar",
 aboutTitle:"Reformas profesionales en Marbella",
-about1:"Realizamos reformas en general en Marbella para pisos, casas y apartamentos.",
-about2:"Trabajo limpio, serio y de confianza, cumpliendo plazos.",
+about1:"En Tu Reforma Perfecta realizamos reformas en general en Marbella con un servicio serio, profesional y de confianza.",
+about2:"Trabajamos en pisos, casas y apartamentos, cuidando los detalles y cumpliendo los plazos acordados.",
 servicesTitle:"Servicios",
 services:[
 "Reformas en general",
+"Reformas de pisos y apartamentos",
+"Reformas de casas",
 "Electricidad",
 "Fontanería",
 "Pintura interior y exterior",
 "Mantenimiento del hogar"
-]
+],
+zoneTitle:"Zona de servicio",
+zoneText:"Marbella, Puerto Banús, San Pedro de Alcántara, Nueva Andalucía y alrededores.",
+contactTitle:"Contacto"
 },
 en:{
 title:"General renovations in Marbella · Your perfect renovation",
-subtitle:"Electrical • Plumbing • Painting • Home renovation",
+subtitle:"Electrical · Plumbing · Painting · Home renovation",
 aboutTitle:"Professional renovations in Marbella",
-about1:"We provide general renovation services in Marbella.",
-about2:"Clean and reliable work.",
+about1:"We provide general renovation services in Marbella with a professional and reliable approach.",
+about2:"Apartments, houses and full home renovations.",
 servicesTitle:"Services",
 services:[
 "General renovations",
+"Apartments renovations",
+"House renovations",
 "Electrical work",
 "Plumbing",
 "Painting",
 "Home maintenance"
-]
+],
+zoneTitle:"Service area",
+zoneText:"Marbella and surrounding areas.",
+contactTitle:"Contact"
 },
 ro:{
 title:"Renovări generale în Marbella · Reforma ta perfectă",
-subtitle:"Electricitate • Instalații • Vopsire",
+subtitle:"Electricitate · Instalații · Vopsire · Renovări",
 aboutTitle:"Renovări profesionale",
-about1:"Oferim renovări generale în Marbella.",
-about2:"Lucrări curate și serioase.",
+about1:"Oferim renovări generale în Marbella, lucrări serioase și de calitate.",
+about2:"Apartamente, case și renovări complete.",
 servicesTitle:"Servicii",
 services:[
 "Renovări generale",
+"Renovări apartamente",
+"Renovări case",
 "Electricitate",
 "Instalații sanitare",
 "Vopsire",
 "Întreținere"
-]
+],
+zoneTitle:"Zona de lucru",
+zoneText:"Marbella și zonele din jur.",
+contactTitle:"Contact"
 },
 ua:{
 title:"Загальний ремонт у Марбельї · Твій ідеальний ремонт",
-subtitle:"Електрика • Сантехніка • Фарбування",
-aboutTitle:"Професійний ремонт",
-about1:"Виконуємо загальний ремонт у Марбельї.",
-about2:"Якісно та надійно.",
+subtitle:"Електрика · Сантехніка · Фарбування · Ремонт",
+aboutTitle:"Професійний ремонт у Марбельї",
+about1:"Виконуємо загальний ремонт у Марбельї якісно та відповідально.",
+about2:"Квартири, будинки та комплексні ремонти.",
 servicesTitle:"Послуги",
 services:[
 "Загальний ремонт",
+"Ремонт квартир",
+"Ремонт будинків",
 "Електрика",
 "Сантехніка",
 "Фарбування",
 "Обслуговування"
-]
+],
+zoneTitle:"Зона роботи",
+zoneText:"Марбелья та околиці.",
+contactTitle:"Контакти"
 }
 };
 
 function setLang(l){
-document.getElementById("title").innerText=data[l].title;
-document.getElementById("subtitle").innerText=data[l].subtitle;
-document.getElementById("aboutTitle").innerText=data[l].aboutTitle;
-document.getElementById("about1").innerText=data[l].about1;
-document.getElementById("about2").innerText=data[l].about2;
-document.getElementById("servicesTitle").innerText=data[l].servicesTitle;
-const ul=document.getElementById("services");
-ul.innerHTML="";
+title.innerText=data[l].title;
+subtitle.innerText=data[l].subtitle;
+aboutTitle.innerText=data[l].aboutTitle;
+about1.innerText=data[l].about1;
+about2.innerText=data[l].about2;
+servicesTitle.innerText=data[l].servicesTitle;
+services.innerHTML="";
 data[l].services.forEach(s=>{
 const li=document.createElement("li");
 li.innerText=s;
-ul.appendChild(li);
+services.appendChild(li);
 });
+zoneTitle.innerText=data[l].zoneTitle;
+zoneText.innerText=data[l].zoneText;
+contactTitle.innerText=data[l].contactTitle;
 }
 setLang("es");
 </script>
 
 </body>
-</html
+</html>

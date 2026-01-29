@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#333}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f5f5;
+  color:#333;
+}
 .hero{
   background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
   min-height:90vh;
@@ -18,37 +22,65 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#3
   justify-content:center;
 }
 .box{
-  background:rgba(255,255,255,.95);
+  background:rgba(255,255,255,0.95);
   padding:40px;
   border-radius:18px;
   max-width:1000px;
   width:90%;
   text-align:center;
 }
-.flags span{font-size:30px;cursor:pointer;margin:0 8px}
-h1{font-size:36px;margin:20px 0 10px}
-.subtitle{font-size:18px;color:#555;margin-bottom:25px}
+.flags span{
+  font-size:30px;
+  cursor:pointer;
+  margin:0 8px;
+}
+h1{
+  font-size:36px;
+  margin:20px 0 10px;
+}
+.subtitle{
+  font-size:18px;
+  color:#555;
+  margin-bottom:25px;
+}
 .btn{
-  background:#25D366;color:#fff;padding:15px 30px;
-  border-radius:40px;text-decoration:none;font-weight:bold
+  background:#25D366;
+  color:#fff;
+  padding:15px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
 }
-.container{max-width:1100px;margin:auto;padding:50px 20px;background:#fff}
-h2{color:#1f6f5c;margin-top:40px}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-  margin-top:20px
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+  background:#fff;
 }
-.gallery img{width:100%;border-radius:12px}
+h2{
+  color:#1f6f5c;
+  margin-top:40px;
+}
 .whatsapp{
-  position:fixed;bottom:20px;right:20px;
-  background:#25D366;color:#fff;
-  padding:15px 22px;border-radius:50px;
-  text-decoration:none;font-weight:bold
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
 }
-footer{background:#222;color:#fff;text-align:center;padding:30px}
-@media(max-width:600px){h1{font-size:26px}}
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:30px;
+}
+@media(max-width:600px){
+  h1{font-size:26px;}
+}
 </style>
 </head>
 
@@ -78,19 +110,12 @@ footer{background:#222;color:#fff;text-align:center;padding:30px}
 
 <div class="container">
 
-<h2 id="servicesTitle"></h2>
-<ul id="services"></ul>
-
 <h2 id="aboutTitle"></h2>
 <p id="about1"></p>
 <p id="about2"></p>
 
-<h2>Nuestros trabajos</h2>
-<div class="gallery">
-  <img src="work1.jpg" alt="Reformas en Marbella">
-  <img src="work2.jpg" alt="Electricidad en Marbella">
-  <img src="work3.jpg" alt="Fontanería en Marbella">
-</div>
+<h2 id="servicesTitle"></h2>
+<ul id="services"></ul>
 
 <h2>Contacto</h2>
 <p>
@@ -109,52 +134,82 @@ const data={
 es:{
 title:"Reformas en general en Marbella · Tu reforma perfecta",
 subtitle:"Electricidad • Fontanería • Pintura • Reformas del hogar",
-servicesTitle:"Servicios",
-services:["Reformas en general","Electricidad","Fontanería","Pintura","Mantenimiento"],
 aboutTitle:"Reformas profesionales en Marbella",
-about1:"Ofrecemos reformas en general en Marbella para pisos, casas y apartamentos.",
-about2:"Trabajo limpio, serio y de confianza."
+about1:"Realizamos reformas en general en Marbella para pisos, casas y apartamentos.",
+about2:"Trabajo limpio, serio y de confianza, cumpliendo plazos.",
+servicesTitle:"Servicios",
+services:[
+"Reformas en general",
+"Electricidad",
+"Fontanería",
+"Pintura interior y exterior",
+"Mantenimiento del hogar"
+]
 },
 en:{
 title:"General renovations in Marbella · Your perfect renovation",
 subtitle:"Electrical • Plumbing • Painting • Home renovation",
-servicesTitle:"Services",
-services:["General renovations","Electrical work","Plumbing","Painting","Maintenance"],
 aboutTitle:"Professional renovations in Marbella",
-about1:"We provide renovation services in Marbella.",
-about2:"Clean and reliable work."
+about1:"We provide general renovation services in Marbella.",
+about2:"Clean and reliable work.",
+servicesTitle:"Services",
+services:[
+"General renovations",
+"Electrical work",
+"Plumbing",
+"Painting",
+"Home maintenance"
+]
 },
 ro:{
 title:"Renovări generale în Marbella · Reforma ta perfectă",
 subtitle:"Electricitate • Instalații • Vopsire",
-servicesTitle:"Servicii",
-services:["Renovări generale","Electricitate","Instalații","Vopsire","Întreținere"],
 aboutTitle:"Renovări profesionale",
 about1:"Oferim renovări generale în Marbella.",
-about2:"Lucrări curate și serioase."
+about2:"Lucrări curate și serioase.",
+servicesTitle:"Servicii",
+services:[
+"Renovări generale",
+"Electricitate",
+"Instalații sanitare",
+"Vopsire",
+"Întreținere"
+]
 },
 ua:{
 title:"Загальний ремонт у Марбельї · Твій ідеальний ремонт",
 subtitle:"Електрика • Сантехніка • Фарбування",
-servicesTitle:"Послуги",
-services:["Загальний ремонт","Електрика","Сантехніка","Фарбування","Обслуговування"],
 aboutTitle:"Професійний ремонт",
 about1:"Виконуємо загальний ремонт у Марбельї.",
-about2:"Якісно та надійно."
+about2:"Якісно та надійно.",
+servicesTitle:"Послуги",
+services:[
+"Загальний ремонт",
+"Електрика",
+"Сантехніка",
+"Фарбування",
+"Обслуговування"
+]
 }
 };
+
 function setLang(l){
-title.innerText=data[l].title;
-subtitle.innerText=data[l].subtitle;
-servicesTitle.innerText=data[l].servicesTitle;
-services.innerHTML="";
-data[l].services.forEach(s=>{let li=document.createElement("li");li.innerText=s;services.appendChild(li);});
-aboutTitle.innerText=data[l].aboutTitle;
-about1.innerText=data[l].about1;
-about2.innerText=data[l].about2;
+document.getElementById("title").innerText=data[l].title;
+document.getElementById("subtitle").innerText=data[l].subtitle;
+document.getElementById("aboutTitle").innerText=data[l].aboutTitle;
+document.getElementById("about1").innerText=data[l].about1;
+document.getElementById("about2").innerText=data[l].about2;
+document.getElementById("servicesTitle").innerText=data[l].servicesTitle;
+const ul=document.getElementById("services");
+ul.innerHTML="";
+data[l].services.forEach(s=>{
+const li=document.createElement("li");
+li.innerText=s;
+ul.appendChild(li);
+});
 }
 setLang("es");
 </script>
 
 </body>
-</html>
+</html

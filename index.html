@@ -1,230 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <title>Reformas en general en Marbella | Tu Reforma Perfecta</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Empresa de reformas en general en Marbella. Electricidad, fontanería, pintura y reformas completas.">
+<meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y mantenimiento del hogar.">
 
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#333;line-height:1.6}
-a{text-decoration:none}
-header{background:#0b2a3f;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center}
-header strong{font-size:18px}
-.flags img{width:22px;margin-left:10px;cursor:pointer}
-
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
+  color:#333;
+}
 .hero{
-background:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
-padding:120px 20px
+  background:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
+  padding:110px 20px;
+  text-align:center;
 }
 .hero-box{
-background:rgba(255,255,255,.95);
-max-width:1100px;
-margin:auto;
-padding:45px;
-border-radius:12px
+  background:rgba(255,255,255,0.95);
+  max-width:900px;
+  margin:auto;
+  padding:40px;
+  border-radius:10px;
 }
-.hero h1{font-size:36px;margin:0}
-.hero p{font-size:18px;color:#555}
-
+h1{font-size:34px;margin-bottom:10px}
+h2{color:#555;font-weight:normal}
 .btn{
-display:inline-block;
-margin-top:20px;
-background:#25d366;
-color:#fff;
-padding:15px 35px;
-border-radius:30px;
-font-weight:bold
+  display:inline-block;
+  margin-top:20px;
+  background:#25d366;
+  color:#fff;
+  padding:15px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
 }
-
 section{
-max-width:1100px;
-margin:40px auto;
-background:#fff;
-padding:60px 30px;
-border-radius:12px
+  max-width:1000px;
+  margin:30px auto;
+  background:#fff;
+  padding:40px 20px;
+  border-radius:8px;
 }
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px
-}
-.card{
-background:#eef4fa;
-padding:25px;
-border-radius:10px
-}
-
-.cta{
-background:#0b2a3f;
-color:#fff;
-text-align:center;
-padding:70px 20px
-}
-
-footer{
-background:#1a1a1a;
-color:#fff;
-padding:50px 20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px
-}
-
+ul{line-height:1.8}
 .whatsapp{
-position:fixed;
-bottom:20px;
-left:20px;
-width:60px;
-height:60px;
-background:#25d366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#25d366;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .whatsapp img{width:35px}
+footer{
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<strong>Tu Reforma Perfecta</strong>
-<div class="flags">
-<img src="https://flagcdn.com/w20/es.png" onclick="setLang('es')">
-<img src="https://flagcdn.com/w20/gb.png" onclick="setLang('en')">
-<img src="https://flagcdn.com/w20/ua.png" onclick="setLang('ua')">
-<img src="https://flagcdn.com/w20/ro.png" onclick="setLang('ro')">
-</div>
-</header>
-
 <div class="hero">
-<div class="hero-box">
-<h1 id="title"></h1>
-<p id="subtitle"></p>
-<a class="btn" href="https://wa.me/34643700299" target="_blank">
-WhatsApp: +34 643 700 299
-</a>
-<p>📧 handymanmarbella@outlook.com</p>
-</div>
-</div>
+  <div class="hero-box">
+    <h1>Reformas en general en Marbella</h1>
+    <h2>Electricidad · Fontanería · Pintura · Reformas del hogar</h2>
 
-<section>
-<h2 id="aboutTitle"></h2>
-<p id="aboutText"></p>
-</section>
+    <a class="btn" href="https://wa.me/34643700299" target="_blank">
+      WhatsApp: +34 643 700 299
+    </a>
 
-<section>
-<h2 id="servicesTitle"></h2>
-<div class="services" id="services"></div>
-</section>
-
-<div class="cta">
-<h2 id="ctaTitle"></h2>
-<p id="ctaText"></p>
-<a class="btn" href="https://wa.me/34643700299" target="_blank">CONTACTAR POR WHATSAPP</a>
+    <p style="margin-top:15px;">
+      📧 handymanmarbella@outlook.com
+    </p>
+  </div>
 </div>
 
 <section>
-<h2 id="zoneTitle"></h2>
-<p id="zoneText"></p>
+  <h2>Reformas profesionales en Marbella</h2>
+  <p>
+    En <strong>Tu Reforma Perfecta</strong> realizamos reformas en general en Marbella,
+    ofreciendo un servicio profesional, serio y de confianza.
+  </p>
+  <p>
+    Trabajamos en pisos, casas y apartamentos realizando trabajos de electricidad,
+    fontanería, pintura y mantenimiento del hogar.
+  </p>
 </section>
 
-<footer id="footerText"></footer>
+<section>
+  <h2>Servicios</h2>
+  <ul>
+    <li>Reformas en general</li>
+    <li>Reformas de pisos y apartamentos</li>
+    <li>Reformas de casas</li>
+    <li>Electricidad</li>
+    <li>Fontanería</li>
+    <li>Pintura interior y exterior</li>
+    <li>Mantenimiento del hogar</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Zona de servicio</h2>
+  <p>
+    Marbella, Puerto Banús, San Pedro de Alcántara,
+    Nueva Andalucía y alrededores.
+  </p>
+</section>
+
+<section>
+  <h2>Contacto</h2>
+  <p>📞 Tel / WhatsApp: <strong>+34 643 700 299</strong></p>
+  <p>📧 Email: <strong>handymanmarbella@outlook.com</strong></p>
+</section>
+
+<footer>
+  © Tu Reforma Perfecta – Marbella
+</footer>
 
 <a class="whatsapp" href="https://wa.me/34643700299" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
-
-<script>
-const data={
-es:{
-title:"Reformas en general en Marbella",
-subtitle:"Empresa de reformas completas · Electricidad · Fontanería · Pintura",
-aboutTitle:"Empresa de reformas en Marbella",
-aboutText:"Somos una empresa especializada en reformas en general en Marbella. Realizamos reformas integrales y parciales para pisos, casas y apartamentos. Trabajamos con seriedad, buenos acabados y cumplimiento de plazos.",
-servicesTitle:"Nuestros servicios",
-services:[
-"Reformas integrales de viviendas",
-"Electricidad e instalaciones eléctricas",
-"Fontanería y reparaciones",
-"Pintura interior y exterior",
-"Mantenimiento del hogar",
-"Reformas parciales y reparaciones"
-],
-ctaTitle:"¿Necesitas una reforma en Marbella?",
-ctaText:"Llámanos o escríbenos por WhatsApp y solicita tu presupuesto sin compromiso.",
-zoneTitle:"Zona de servicio",
-zoneText:"Marbella, Puerto Banús, Nueva Andalucía, San Pedro de Alcántara y alrededores.",
-footer:"© Tu Reforma Perfecta – Reformas en general en Marbella"
-},
-en:{
-title:"General renovations in Marbella",
-subtitle:"Full renovations · Electrical · Plumbing · Painting",
-aboutTitle:"Renovation company in Marbella",
-aboutText:"We provide full renovation services in Marbella for apartments, houses and homes.",
-servicesTitle:"Our services",
-services:["Full renovations","Electrical work","Plumbing","Painting","Home maintenance","Repairs"],
-ctaTitle:"Need a renovation in Marbella?",
-ctaText:"Contact us on WhatsApp for a free quote.",
-zoneTitle:"Service area",
-zoneText:"Marbella and surrounding areas.",
-footer:"© Tu Reforma Perfecta – Marbella"
-},
-ua:{
-title:"Загальний ремонт у Марбельї",
-subtitle:"Комплексні ремонти · Електрика · Сантехніка · Фарбування",
-aboutTitle:"Компанія з ремонту у Марбельї",
-aboutText:"Виконуємо загальний та комплексний ремонт у Марбельї для квартир і будинків.",
-servicesTitle:"Наші послуги",
-services:["Комплексний ремонт","Електрика","Сантехніка","Фарбування","Обслуговування","Ремонт"],
-ctaTitle:"Потрібен ремонт у Марбельї?",
-ctaText:"Напишіть нам у WhatsApp для безкоштовної консультації.",
-zoneTitle:"Зона роботи",
-zoneText:"Марбелья та околиці.",
-footer:"© Tu Reforma Perfecta – Marbella"
-},
-ro:{
-title:"Renovări generale în Marbella",
-subtitle:"Renovări complete · Electricitate · Instalații · Vopsire",
-aboutTitle:"Firmă de renovări în Marbella",
-aboutText:"Oferim renovări generale și complete pentru locuințe în Marbella.",
-servicesTitle:"Servicii",
-services:["Renovări complete","Electricitate","Instalații sanitare","Vopsire","Întreținere","Reparații"],
-ctaTitle:"Ai nevoie de renovare?",
-ctaText:"Contactează-ne pe WhatsApp pentru ofertă.",
-zoneTitle:"Zona de lucru",
-zoneText:"Marbella și zonele din jur.",
-footer:"© Tu Reforma Perfecta – Marbella"
-}
-};
-
-function setLang(l){
-document.getElementById("title").innerText=data[l].title;
-document.getElementById("subtitle").innerText=data[l].subtitle;
-document.getElementById("aboutTitle").innerText=data[l].aboutTitle;
-document.getElementById("aboutText").innerText=data[l].aboutText;
-document.getElementById("servicesTitle").innerText=data[l].servicesTitle;
-const s=document.getElementById("services");
-s.innerHTML="";
-data[l].services.forEach(x=>{
-const d=document.createElement("div");
-d.className="card";
-d.innerText=x;
-s.appendChild(d);
-});
-document.getElementById("ctaTitle").innerText=data[l].ctaTitle;
-document.getElementById("ctaText").innerText=data[l].ctaText;
-document.getElementById("zoneTitle").innerText=data[l].zoneTitle;
-document.getElementById("zoneText").innerText=data[l].zoneText;
-document.getElementById("footerText").innerText=data[l].footer;
-}
-setLang("es");
-</script>
 
 </body>
 </html>

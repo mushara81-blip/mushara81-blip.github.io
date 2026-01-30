@@ -2,167 +2,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Reformas en general en Marbella – Tu reforma perfecta</title>
-  <meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y mantenimiento del hogar. Trabajo profesional y de confianza.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #1f6f5c;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    header p {
-      font-size: 18px;
-      margin-top: 15px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      background: #25D366;
-      color: #fff;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
-      background: #fff;
-    }
-    h2 {
-      color: #1f6f5c;
-      margin-top: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #25D366;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      padding: 15px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 26px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Reformas en general en Marbella – Tu reforma perfecta</title>
+<meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y mantenimiento del hogar.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f5f5;
+  color:#333;
+  line-height:1.6;
+}
+.hero{
+  background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.box{
+  background:rgba(255,255,255,0.92);
+  padding:45px;
+  border-radius:18px;
+  max-width:1000px;
+  width:90%;
+  text-align:center;
+}
+.flags span{
+  font-size:30px;
+  cursor:pointer;
+  margin:0 10px;
+}
+h1{
+  font-size:36px;
+  margin:20px 0 10px;
+}
+.subtitle{
+  font-size:18px;
+  color:#555;
+  margin-bottom:25px;
+}
+.btn{
+  background:#25D366;
+  color:#fff;
+  padding:16px 32px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
+  display:inline-block;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+  background:#fff;
+}
+h2{
+  color:#1f6f5c;
+  margin-top:40px;
+}
+ul li{
+  margin-bottom:8px;
+}
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+@media(max-width:600px){
+  h1{font-size:26px;}
+}
+</style>
 </head>
 
 <body>
 
-<a class="whatsapp" href="https://wa.me/34643700299" target="_blank">
-  WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/34643700299" target="_blank">WhatsApp</a>
 
-<header>
-  <h1>Reformas en general en Marbella – Tu reforma perfecta</h1>
-  <p>Profesionales en reformas del hogar, electricidad, fontanería y pintura</p>
-  <a class="btn" href="https://wa.me/34643700299" target="_blank">
-    WhatsApp: +34 643 700 299
-  </a>
-</header>
+<div class="hero">
+  <div class="box">
 
-<section>
+    <div class="flags">
+      <span onclick="setLang('es')">🇪🇸</span>
+      <span onclick="setLang('en')">🇬🇧</span>
+      <span onclick="setLang('ro')">🇷🇴</span>
+      <span onclick="setLang('ua')">🇺🇦</span>
+    </div>
 
-  <p>
-    En <strong>Tu Reforma Perfecta</strong> ofrecemos <strong>reformas en general en Marbella</strong>
-    con un servicio profesional, serio y de confianza. Realizamos reformas del hogar,
-    trabajos de electricidad, fontanería, pintura y mantenimiento en pisos, casas y apartamentos.
-  </p>
+    <h1 id="title"></h1>
+    <div class="subtitle" id="subtitle"></div>
 
-  <p>
-    Trabajamos con clientes particulares y propietarios que buscan calidad,
-    limpieza y buenos acabados, cumpliendo siempre los plazos acordados.
-  </p>
+    <a class="btn" href="https://wa.me/34643700299" target="_blank">
+      WhatsApp: +34 643 700 299
+    </a>
 
-  <h2>Servicios de reformas en Marbella</h2>
-  <ul>
-    <li>Reformas en general</li>
-    <li>Reformas de pisos y apartamentos</li>
-    <li>Reformas de casas y viviendas</li>
-    <li>Electricidad</li>
-    <li>Fontanería</li>
-    <li>Pintura interior y exterior</li>
-    <li>Mantenimiento del hogar</li>
-    <li>Pequeñas reparaciones</li>
-  </ul>
+  </div>
+</div>
 
-  <h2>Electricidad en Marbella</h2>
-  <p>
-    Instalaciones eléctricas, reparaciones, enchufes, iluminación y mantenimiento eléctrico
-    para viviendas y apartamentos en Marbella.
-  </p>
+<div class="container">
 
-  <h2>Fontanería en Marbella</h2>
-  <p>
-    Reparación de fugas, cambios de grifería, instalaciones y soluciones rápidas
-    de fontanería para el hogar.
-  </p>
+<h2 id="servicesTitle"></h2>
+<ul id="services"></ul>
 
-  <h2>Pintura y acabados</h2>
-  <p>
-    Pintura interior y exterior con acabados limpios y materiales de calidad.
-  </p>
+<h2 id="aboutTitle"></h2>
+<p id="about1"></p>
+<p id="about2"></p>
 
-  <h2>Zona de servicio</h2>
-  <p>
-    Marbella, Puerto Banús, San Pedro de Alcántara, Nueva Andalucía y alrededores.
-  </p>
+<h2>Contacto</h2>
+<p>
+<strong>Teléfono / WhatsApp:</strong> +34 643 700 299<br>
+<strong>Email:</strong> handymanmarbella@outlook.com
+</p>
 
-  <h2>Contacto</h2>
-  <p>
-    <strong>Teléfono / WhatsApp:</strong> +34 643 700 299<br>
-    <strong>Email:</strong> handymanmarbella@outlook.com
-  </p>
-
-  <p>
-    <strong>Contacta con nosotros hoy mismo y solicita tu presupuesto sin compromiso.</strong><br>
-    Tu reforma perfecta empieza aquí.
-  </p>
-
-</section>
+</div>
 
 <footer>
-  © 2026 Tu Reforma Perfecta – Reformas en general en Marbella<br>
-  <a href="mailto:handymanmarbella@outlook.com">handymanmarbella@outlook.com</a>
+© 2026 Tu Reforma Perfecta – Reformas en general en Marbella
 </footer>
+
+<script>
+const data={
+es:{
+title:"Reformas en general en Marbella · Tu reforma perfecta",
+subtitle:"Electricidad • Fontanería • Pintura • Reformas del hogar",
+servicesTitle:"Servicios",
+services:[
+"Reformas en general",
+"Electricidad",
+"Fontanería",
+"Pintura interior y exterior",
+"Mantenimiento del hogar"
+],
+aboutTitle:"Reformas profesionales en Marbella",
+about1:"Ofrecemos reformas en general en Marbella para pisos, casas y apartamentos.",
+about2:"Trabajo limpio, serio y de confianza."
+},
+en:{
+title:"General renovations in Marbella · Your perfect renovation",
+subtitle:"Electrical • Plumbing • Painting • Home renovation",
+servicesTitle:"Services",
+services:[
+"General renovations",
+"Electrical work",
+"Plumbing",
+"Painting",
+"Home maintenance"
+],
+aboutTitle:"Professional renovations in Marbella",
+about1:"We provide general renovation services in Marbella.",
+about2:"Clean and reliable work."
+},
+ro:{
+title:"Renovări generale în Marbella · Reforma ta perfectă",
+subtitle:"Electricitate • Instalații • Vopsire • Renovări",
+servicesTitle:"Servicii",
+services:[
+"Renovări generale",
+"Electricitate",
+"Instalații sanitare",
+"Vopsire",
+"Întreținere"
+],
+aboutTitle:"Renovări profesionale în Marbella",
+about1:"Oferim renovări generale în Marbella.",
+about2:"Lucrări curate și serioase."
+},
+ua:{
+title:"Загальний ремонт у Марбельї · Твій ідеальний ремонт",
+subtitle:"Електрика • Сантехніка • Фарбування • Ремонт",
+servicesTitle:"Послуги",
+services:[
+"Загальний ремонт",
+"Електрика",
+"Сантехніка",
+"Фарбування",
+"Обслуговування житла"
+],
+aboutTitle:"Професійний ремонт у Марбельї",
+about1:"Виконуємо загальний ремонт у Марбельї.",
+about2:"Якісно, чисто та надійно."
+}
+};
+
+function setLang(l){
+document.getElementById("title").innerText=data[l].title;
+document.getElementById("subtitle").innerText=data[l].subtitle;
+document.getElementById("servicesTitle").innerText=data[l].servicesTitle;
+const ul=document.getElementById("services");
+ul.innerHTML="";
+data[l].services.forEach(s=>{
+const li=document.createElement("li");
+li.innerText=s;
+ul.appendChild(li);
+});
+document.getElementById("aboutTitle").innerText=data[l].aboutTitle;
+document.getElementById("about1").innerText=data[l].about1;
+document.getElementById("about2").innerText=data[l].about2;
+}
+setLang("es");
+</script>
 
 </body>
 </html>

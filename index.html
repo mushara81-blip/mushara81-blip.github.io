@@ -2,136 +2,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Reformas en general en Marbella | Tu reforma perfecta</title>
-  <meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y mantenimiento del hogar. Presupuesto sin compromiso.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Reformas en general en Marbella | Tu Reforma Perfecta</title>
+<meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y mantenimiento del hogar. WhatsApp disponible.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE -->
-  <meta name="robots" content="index, follow">
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
+  color:#333;
+}
 
-  <!-- STYLE -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
+/* FLAGS */
+.lang{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:9999;
+}
+.lang img{
+  width:22px;
+  margin-left:8px;
+  cursor:pointer;
+  box-shadow:0 0 4px rgba(0,0,0,.3);
+}
 
-    /* LANGUAGE FLAGS */
-    .lang-switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 9999;
-      display: flex;
-      gap: 10px;
-    }
+/* HERO */
+.hero{
+  background:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952") center/cover no-repeat;
+  padding:110px 20px;
+}
+.hero-box{
+  background:rgba(255,255,255,.95);
+  max-width:900px;
+  margin:auto;
+  padding:40px;
+  border-radius:10px;
+  text-align:center;
+}
+.hero h1{
+  font-size:34px;
+  margin-bottom:10px;
+}
+.hero p{
+  font-size:18px;
+  color:#555;
+}
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#25d366;
+  color:#fff;
+  padding:15px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    .lang-switch img {
-      width: 22px;
-      cursor: pointer;
-      border-radius: 3px;
-      box-shadow: 0 0 4px rgba(0,0,0,0.3);
-    }
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:40px auto;
+  background:#fff;
+  padding:50px 20px;
+  border-radius:10px;
+}
+section h2{
+  text-align:center;
+  margin-bottom:30px;
+}
 
-    /* HERO */
-    .hero {
-      background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover no-repeat;
-      padding: 100px 20px;
-      text-align: center;
-    }
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.service{
+  background:#f7f7f7;
+  padding:25px;
+  border-radius:10px;
+  text-align:center;
+}
+.service img{
+  width:60px;
+  margin-bottom:15px;
+}
 
-    .hero-box {
-      background: rgba(255,255,255,0.9);
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 10px;
-    }
+/* WHY */
+.why li{
+  margin-bottom:10px;
+}
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+/* FOOTER */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
 
-    h2 {
-      font-size: 20px;
-      font-weight: normal;
-      color: #555;
-    }
-
-    .whatsapp-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    /* SECTIONS */
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-      background: white;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-
-    ul {
-      line-height: 1.8;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #25d366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    .whatsapp-float img {
-      width: 35px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.whatsapp img{
+  width:35px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- LANGUAGE FLAGS -->
-<div class="lang-switch">
+<!-- FLAGS -->
+<div class="lang">
   <img src="https://flagcdn.com/w20/es.png" alt="ES">
   <img src="https://flagcdn.com/w20/gb.png" alt="EN">
-  <img src="https://flagcdn.com/w20/ua.png" alt="UA">
   <img src="https://flagcdn.com/w20/ro.png" alt="RO">
+  <img src="https://flagcdn.com/w20/ua.png" alt="UA">
 </div>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-box">
-    <h1>Reformas en general en Marbella – Tu reforma perfecta</h1>
-    <h2>Electricidad · Fontanería · Pintura · Reformas del hogar</h2>
+    <h1>Reformas en general en Marbella</h1>
+    <p>Tu reforma perfecta · Electricidad · Fontanería · Pintura</p>
 
-    <a class="whatsapp-btn" href="https://wa.me/34643700299" target="_blank">
+    <a class="btn" href="https://wa.me/34643700299" target="_blank">
       WhatsApp: +34 643 700 299
     </a>
 
@@ -143,49 +152,62 @@
 
 <!-- ABOUT -->
 <section>
-  <h2>¿Quiénes somos?</h2>
+  <h2>Reformas profesionales en Marbella</h2>
   <p>
-    En <strong>Tu Reforma Perfecta</strong> realizamos reformas en general en Marbella,
-    ofreciendo un servicio profesional, serio y de confianza.
+    En <strong>Tu Reforma Perfecta</strong> realizamos reformas en general en Marbella y alrededores.
+    Ofrecemos un servicio serio, profesional y de confianza.
   </p>
   <p>
-    Trabajamos en pisos, casas y apartamentos, realizando trabajos de electricidad,
+    Trabajamos en pisos, casas y apartamentos realizando trabajos de electricidad,
     fontanería, pintura y mantenimiento del hogar.
   </p>
 </section>
 
 <!-- SERVICES -->
 <section>
-  <h2>Servicios</h2>
-  <ul>
-    <li>Reformas en general</li>
-    <li>Reformas de pisos y apartamentos</li>
-    <li>Reformas de casas</li>
-    <li>Electricidad</li>
-    <li>Fontanería</li>
-    <li>Pintura interior y exterior</li>
-    <li>Mantenimiento del hogar</li>
-  </ul>
+  <h2>Nuestros servicios</h2>
+  <div class="services">
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/maintenance.png">
+      <h3>Reformas en general</h3>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/electrical.png">
+      <h3>Electricidad</h3>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/plumbing.png">
+      <h3>Fontanería</h3>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/paint-roller.png">
+      <h3>Pintura</h3>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/home.png">
+      <h3>Mantenimiento</h3>
+    </div>
+  </div>
 </section>
 
 <!-- WHY -->
 <section>
   <h2>¿Por qué elegirnos?</h2>
-  <ul>
-    <li>Experiencia en reformas en Marbella</li>
-    <li>Trabajo limpio y bien terminado</li>
-    <li>Trato directo y personalizado</li>
-    <li>Presupuesto sin compromiso</li>
-    <li>Seriedad y responsabilidad</li>
+  <ul class="why">
+    <li>✔ Experiencia en reformas en Marbella</li>
+    <li>✔ Trabajo limpio y bien terminado</li>
+    <li>✔ Trato directo y personalizado</li>
+    <li>✔ Presupuesto sin compromiso</li>
+    <li>✔ Seriedad y responsabilidad</li>
   </ul>
 </section>
 
-<!-- AREA -->
+<!-- ZONE -->
 <section>
   <h2>Zona de servicio</h2>
   <p>
-    Marbella, Puerto Banús, San Pedro de Alcántara,
-    Nueva Andalucía y alrededores.
+    Marbella · Puerto Banús · San Pedro de Alcántara ·
+    Nueva Andalucía y alrededores
   </p>
 </section>
 
@@ -197,14 +219,14 @@
   <p><strong>Contacta con nosotros y solicita tu presupuesto sin compromiso.</strong></p>
 </section>
 
+<footer>
+  © Tu Reforma Perfecta – Marbella
+</footer>
+
 <!-- WHATSAPP FLOAT -->
-<a class="whatsapp-float" href="https://wa.me/34643700299" target="_blank">
+<a class="whatsapp" href="https://wa.me/34643700299" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
-
-<footer>
-  © 2026 Tu Reforma Perfecta · Marbella
-</footer>
 
 </body>
 </html>

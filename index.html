@@ -2,222 +2,209 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Reformas en general en Marbella · Tu reforma perfecta</title>
-<meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y reformas del hogar.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Reformas en general en Marbella | Tu reforma perfecta</title>
+  <meta name="description" content="Reformas en general en Marbella. Electricidad, fontanería, pintura y mantenimiento del hogar. Presupuesto sin compromiso.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:#333}
-.hero{
-  background:url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover;
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.box{
-  background:rgba(255,255,255,0.95);
-  padding:40px;
-  border-radius:18px;
-  max-width:1000px;
-  width:90%;
-  text-align:center;
-}
-.flags span{
-  font-size:30px;
-  cursor:pointer;
-  margin:0 8px;
-}
-h1{font-size:36px;margin:20px 0 10px}
-.subtitle{font-size:18px;color:#555;margin-bottom:25px}
-.btn{
-  background:#25D366;
-  color:#fff;
-  padding:15px 30px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:50px 20px;
-  background:#fff;
-}
-h2{color:#1f6f5c;margin-top:40px}
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px 22px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-}
-footer{
-  background:#222;
-  color:#fff;
-  text-align:center;
-  padding:30px;
-}
-@media(max-width:600px){h1{font-size:26px}}
-</style>
+  <!-- GOOGLE -->
+  <meta name="robots" content="index, follow">
+
+  <!-- STYLE -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    /* LANGUAGE FLAGS */
+    .lang-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-switch img {
+      width: 22px;
+      cursor: pointer;
+      border-radius: 3px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    }
+
+    /* HERO */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c") center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero-box {
+      background: rgba(255,255,255,0.9);
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+      background: white;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #25d366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
 
 <body>
 
-<a class="whatsapp" href="https://wa.me/34643700299" target="_blank">WhatsApp</a>
+<!-- LANGUAGE FLAGS -->
+<div class="lang-switch">
+  <img src="https://flagcdn.com/w20/es.png" alt="ES">
+  <img src="https://flagcdn.com/w20/gb.png" alt="EN">
+  <img src="https://flagcdn.com/w20/ua.png" alt="UA">
+  <img src="https://flagcdn.com/w20/ro.png" alt="RO">
+</div>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="box">
+  <div class="hero-box">
+    <h1>Reformas en general en Marbella – Tu reforma perfecta</h1>
+    <h2>Electricidad · Fontanería · Pintura · Reformas del hogar</h2>
 
-    <div class="flags">
-      <span onclick="setLang('es')">🇪🇸</span>
-      <span onclick="setLang('en')">🇬🇧</span>
-      <span onclick="setLang('ro')">🇷🇴</span>
-      <span onclick="setLang('ua')">🇺🇦</span>
-    </div>
-
-    <h1 id="title"></h1>
-    <div class="subtitle" id="subtitle"></div>
-
-    <a class="btn" href="https://wa.me/34643700299" target="_blank">
+    <a class="whatsapp-btn" href="https://wa.me/34643700299" target="_blank">
       WhatsApp: +34 643 700 299
     </a>
 
+    <p style="margin-top:15px;">
+      📧 handymanmarbella@outlook.com
+    </p>
   </div>
 </div>
 
-<div class="container">
+<!-- ABOUT -->
+<section>
+  <h2>¿Quiénes somos?</h2>
+  <p>
+    En <strong>Tu Reforma Perfecta</strong> realizamos reformas en general en Marbella,
+    ofreciendo un servicio profesional, serio y de confianza.
+  </p>
+  <p>
+    Trabajamos en pisos, casas y apartamentos, realizando trabajos de electricidad,
+    fontanería, pintura y mantenimiento del hogar.
+  </p>
+</section>
 
-<h2 id="aboutTitle"></h2>
-<p id="about1"></p>
-<p id="about2"></p>
+<!-- SERVICES -->
+<section>
+  <h2>Servicios</h2>
+  <ul>
+    <li>Reformas en general</li>
+    <li>Reformas de pisos y apartamentos</li>
+    <li>Reformas de casas</li>
+    <li>Electricidad</li>
+    <li>Fontanería</li>
+    <li>Pintura interior y exterior</li>
+    <li>Mantenimiento del hogar</li>
+  </ul>
+</section>
 
-<h2 id="servicesTitle"></h2>
-<ul id="services"></ul>
+<!-- WHY -->
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <ul>
+    <li>Experiencia en reformas en Marbella</li>
+    <li>Trabajo limpio y bien terminado</li>
+    <li>Trato directo y personalizado</li>
+    <li>Presupuesto sin compromiso</li>
+    <li>Seriedad y responsabilidad</li>
+  </ul>
+</section>
 
-<h2 id="zoneTitle"></h2>
-<p id="zoneText"></p>
+<!-- AREA -->
+<section>
+  <h2>Zona de servicio</h2>
+  <p>
+    Marbella, Puerto Banús, San Pedro de Alcántara,
+    Nueva Andalucía y alrededores.
+  </p>
+</section>
 
-<h2 id="contactTitle"></h2>
-<p>
-<strong>Teléfono / WhatsApp:</strong> +34 643 700 299<br>
-<strong>Email:</strong> handymanmarbella@outlook.com
-</p>
+<!-- CONTACT -->
+<section>
+  <h2>Contacto</h2>
+  <p>📞 Tel / WhatsApp: <strong>+34 643 700 299</strong></p>
+  <p>📧 Email: <strong>handymanmarbella@outlook.com</strong></p>
+  <p><strong>Contacta con nosotros y solicita tu presupuesto sin compromiso.</strong></p>
+</section>
 
-</div>
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/34643700299" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 <footer>
-© 2026 Tu Reforma Perfecta – Reformas en general en Marbella
+  © 2026 Tu Reforma Perfecta · Marbella
 </footer>
-
-<script>
-const data={
-es:{
-title:"Reformas en general en Marbella · Tu reforma perfecta",
-subtitle:"Electricidad · Fontanería · Pintura · Reformas del hogar",
-aboutTitle:"Reformas profesionales en Marbella",
-about1:"En Tu Reforma Perfecta realizamos reformas en general en Marbella con un servicio serio, profesional y de confianza.",
-about2:"Trabajamos en pisos, casas y apartamentos, cuidando los detalles y cumpliendo los plazos acordados.",
-servicesTitle:"Servicios",
-services:[
-"Reformas en general",
-"Reformas de pisos y apartamentos",
-"Reformas de casas",
-"Electricidad",
-"Fontanería",
-"Pintura interior y exterior",
-"Mantenimiento del hogar"
-],
-zoneTitle:"Zona de servicio",
-zoneText:"Marbella, Puerto Banús, San Pedro de Alcántara, Nueva Andalucía y alrededores.",
-contactTitle:"Contacto"
-},
-en:{
-title:"General renovations in Marbella · Your perfect renovation",
-subtitle:"Electrical · Plumbing · Painting · Home renovation",
-aboutTitle:"Professional renovations in Marbella",
-about1:"We provide general renovation services in Marbella with a professional and reliable approach.",
-about2:"Apartments, houses and full home renovations.",
-servicesTitle:"Services",
-services:[
-"General renovations",
-"Apartments renovations",
-"House renovations",
-"Electrical work",
-"Plumbing",
-"Painting",
-"Home maintenance"
-],
-zoneTitle:"Service area",
-zoneText:"Marbella and surrounding areas.",
-contactTitle:"Contact"
-},
-ro:{
-title:"Renovări generale în Marbella · Reforma ta perfectă",
-subtitle:"Electricitate · Instalații · Vopsire · Renovări",
-aboutTitle:"Renovări profesionale",
-about1:"Oferim renovări generale în Marbella, lucrări serioase și de calitate.",
-about2:"Apartamente, case și renovări complete.",
-servicesTitle:"Servicii",
-services:[
-"Renovări generale",
-"Renovări apartamente",
-"Renovări case",
-"Electricitate",
-"Instalații sanitare",
-"Vopsire",
-"Întreținere"
-],
-zoneTitle:"Zona de lucru",
-zoneText:"Marbella și zonele din jur.",
-contactTitle:"Contact"
-},
-ua:{
-title:"Загальний ремонт у Марбельї · Твій ідеальний ремонт",
-subtitle:"Електрика · Сантехніка · Фарбування · Ремонт",
-aboutTitle:"Професійний ремонт у Марбельї",
-about1:"Виконуємо загальний ремонт у Марбельї якісно та відповідально.",
-about2:"Квартири, будинки та комплексні ремонти.",
-servicesTitle:"Послуги",
-services:[
-"Загальний ремонт",
-"Ремонт квартир",
-"Ремонт будинків",
-"Електрика",
-"Сантехніка",
-"Фарбування",
-"Обслуговування"
-],
-zoneTitle:"Зона роботи",
-zoneText:"Марбелья та околиці.",
-contactTitle:"Контакти"
-}
-};
-
-function setLang(l){
-title.innerText=data[l].title;
-subtitle.innerText=data[l].subtitle;
-aboutTitle.innerText=data[l].aboutTitle;
-about1.innerText=data[l].about1;
-about2.innerText=data[l].about2;
-servicesTitle.innerText=data[l].servicesTitle;
-services.innerHTML="";
-data[l].services.forEach(s=>{
-const li=document.createElement("li");
-li.innerText=s;
-services.appendChild(li);
-});
-zoneTitle.innerText=data[l].zoneTitle;
-zoneText.innerText=data[l].zoneText;
-contactTitle.innerText=data[l].contactTitle;
-}
-setLang("es");
-</script>
 
 </body>
 </html>
